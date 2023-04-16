@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Discover from "./Home_Page/Components/Discover/Discover";
+import NavBar from "./Utils/Nav_Bar/NavBar";
+import Search from "./Utils/Search/Search";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar></NavBar>
+      <div className="language">
+        <ul>
+          <li>العربية</li>
+          <li>English</li>
+          <li>French </li>
+          <li>Haitian </li>
+          <li>Spanish</li>
+          <li>Romanian</li>
+          <li>Russian</li>
+        </ul>
+      </div>
+      <div className="bd">
+        <Search />
+        <Discover />
+      </div>
     </div>
   );
 }
